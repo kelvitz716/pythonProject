@@ -1,5 +1,4 @@
 import requests
-import json
 
 def get_usd_to_kes_exchange_rate():
     # Replace 'YOUR_APP_ID' with your actual Open Exchange Rates API App ID
@@ -14,6 +13,9 @@ def get_usd_to_kes_exchange_rate():
         return usd_to_kes_rate
     else:
         return None
+
+# Import json after json module is initialized
+import json
 
 def main():
     usd_to_kes_rate = get_usd_to_kes_exchange_rate()
