@@ -1,0 +1,5 @@
+letter = input('Type a letter to use for the Christmas tree: ')
+print('  ' + letter)
+print(' ' + letter + letter + letter)
+print(letter + letter + letter + letter + letter)
+print('  |  ')
