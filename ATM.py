@@ -7,6 +7,10 @@ while chances >= 0:
     pin = int(input("Enter your pin number: "))
     if pin != 0000:
         print("Incorrect pin: Try again!!")
+        chances = chances - 1
+        if chances == 0:
+            print("Account locked.")
+            break
     else:
         #options
         while restart not in ('no','No','NO','N','n'):
@@ -52,11 +56,3 @@ while chances >= 0:
                 if restart in ('no','No','NO','N','n'):
                     print("Thank you")
                     break
-
-
-else: 
-    print("Account locked due to wrong number of pin")
-
-
-
-
