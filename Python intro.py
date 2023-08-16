@@ -1,5 +1,6 @@
 title = "Welcome to Python"
 print(title)
+title.capitalize
 
 #calculate years
 import time
