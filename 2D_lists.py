@@ -29,6 +29,11 @@ def show_food(pantry):
     '''
     for key in pantry:
         print(key, '-->', pantry[key])
+    '''
+    the following can be used as an alternative to above code:
+    for key,key_value in pantry.items():
+        print(key, '-->', key_value)
+        '''
 
 def main():
     pantry_items = {}
