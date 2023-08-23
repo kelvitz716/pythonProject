@@ -5,4 +5,5 @@ if base_word in thesaurus:
     thesaurus[base_word].add(similar_word)
 else:
     thesaurus[base_word] = {similar_word}
-print(thesaurus)
+new_var = thesaurus
+print(new_var)
