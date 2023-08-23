@@ -21,3 +21,9 @@ class Point:
 
 point1 = Point()
 point1.align
+
+from pathlib import Path
+path = Path()
+for file in path.glob('*.py'):
+    print(file)
+    
