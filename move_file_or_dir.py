@@ -9,6 +9,6 @@ try:
         print("There's a similar file/dir in destination location: ")
     else:
         os.replace(source,destination)
-        print("File/dir moved. ")
+        print(f"{source} file/dir was moved. ")
 except ValueError as e:
     print(e)
