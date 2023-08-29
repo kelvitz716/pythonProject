@@ -25,5 +25,13 @@ while i<=100:
 
 print("this is greater than 100")
 
+food = ["ugali", "rice", "beans", "fries", "soda"]
+food.append("yorghurt")
+for items in food:
+    print(items + " ", end="")
+
+    print
+
+
     
 
