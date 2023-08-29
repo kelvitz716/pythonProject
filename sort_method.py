@@ -6,8 +6,8 @@ students = (("squidward","F","60"),
 
 age = lambda age:age[2]
 #students.sort(key=age,reverse=True) #this sorts a tuple inside a list
-sorted_students = sorted(students, reverse=True)    #this sorts a tuple inside an tuple
-for i in students:
+sorted_students = sorted(students, key=age,reverse=True)    #this sorts a tuple inside an tuple
+for i in sorted_students:
     print(i)
 
 
