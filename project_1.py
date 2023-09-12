@@ -2,7 +2,7 @@ import datetime as dt
 import time as tm
 
 
-file = 'todo.txt' #input('Enter the file name: ')
+file = 'todo.txt' #Name of the file that actually stores the tasks.
 
 def add_task(due_year, due_month, due_day, new_line):
     todo_file = open(file, 'a')

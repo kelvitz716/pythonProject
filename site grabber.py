@@ -31,5 +31,5 @@ def download_website(base_url):
                     save_page(link_url, link_response)
                     print(f"Downloaded: {link_url}")
 
-base_url = "https://pyflo.net/"
+base_url = "https://www.corporatestaffing.co.ke/"
 download_website(base_url)

@@ -48,6 +48,7 @@ def remove_from_todo_list(number):
     for line in todo_file:
         if counter != number:
             new_content += line
+            print(new_content)
         counter += 1
     todo_file.close()
     todo_file = open(FILE_NAME, 'w')
