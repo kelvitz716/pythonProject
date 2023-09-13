@@ -93,9 +93,9 @@ def main():
     command = ''
     while command != 'exit':
             #print('\n')
-            command = input('Do you want to add, delete, due, show or exit the To-Do list? '.strip())
-            if command == 'add'.lower():
-                new_line = input('Enter your new task: ')
+            command = input('Do you want to add, delete, due, show or exit the To-Do list? ').strip().lower()
+            if command == 'add':
+                new_line = input('Enter your new task: ').capitalize()
                 some_year = int(input('Enter the due date Year: '))
                 some_month = int(input('Enter the due date Month: '))
                 some_day = int(input('Enter the due date Day: '))
