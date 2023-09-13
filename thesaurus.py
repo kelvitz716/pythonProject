@@ -57,7 +57,7 @@ def main():
         if action.lower() == 'exit':
             break
         elif action.lower() == 'search':
-            search_word = input("Enter a word: ")
+            search_word = input("Enter a word: ").lower()
             word_details = get_word_details(search_word, parsed_data)
 
             if word_details:
