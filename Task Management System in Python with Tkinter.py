@@ -33,13 +33,13 @@ class TaskManager():
 
 
         # Priority Label and Dropdown
-        tk.Label(self.root, text="Priority:").grid(row=0, column=0, sticky='w')
+        tk.Label(self.root, text="Priority:").grid(row=1, column=0, sticky='w')
         priority_values = ['Low', 'Medium', 'High']
-        priority_dropdown = tk.ComboBox(self.root, textvariable=self.priority_var, values=priority_values)
+        priority_dropdown = ttk.Combobox(self.root, textvariable=self.priority_var, values=priority_values)
         priority_dropdown.grid(row=1, column=1, padx=10, pady=5)
 
         # Due Date Label and Calendar
-        tk.Label(self.root, text="Due Date:").grid(row=0, column=0, sticky='w')
+        tk.Label(self.root, text="Due Date:").grid(row=2, column=0, sticky='w')
         due_date_entry = DateEntry(self.root, textvariable=self.due_date_var, date_pattern='yyyy-mm-dd')
         due_date_entry.grid(row=2, column=1, padx=10, pady=5)
 
@@ -49,7 +49,7 @@ class TaskManager():
 
 
         # Task List TreeView
-        self.task_list_treeview = ttk.Treeview(self.root, columns=("Priority", "Due date"))
+        self.task_list_treeview = ttk.Treeview(self.root, columns=("Priority", "Due Date"))
         self.task_list_treeview.grid(row=4, column=0, columnspan=2, padx=10, pady=5)
         self.task_list_treeview.heading("#0", text="Task Name:")
         self.task_list_treeview.heading("Priority", text="Priority")
@@ -104,11 +104,7 @@ class TaskManager():
 
 
 
-if __name__ == "__name__":
-    root =tk.Tk()
+if __name__ == "__main__":
+    root = tk.Tk()
     app = TaskManager(root)
     root.mainloop()
-
-
-
-
