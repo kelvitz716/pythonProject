@@ -47,12 +47,31 @@ def get_word_details(word, data):
     
     return word_details
 
+def add_synonym(data,):
+    word = input("Enter the word: ")
+    key = input("Enter the key: ")
+    pos = input("Enter the part of speech: ")
+
+
+    for entry in data:
+        if entry.get('word') == word and entry.get('key') == key and entry.get('pos') == pos and entry.get('synonmys') == synonyms:
+
+            synonyms = entry.get('synonyms', [])
+            print(synonyms)
+            synonym = input("Enter synonyms (comma-separated): ").split(',')
+            break
+
+
+
+            
+
+
 def main():
     file_path = 'en_thesaurus.jsonl'
     parsed_data = parse_jsonl_file(file_path)
 
     while True:
-        action = input("Enter 'search' to look up a word, 'add' to add new data, or 'exit' to quit: ")
+        action = input("Enter 'search' to look up a word,  'update' to add a new synonym, 'add' to add new data, or 'exit' to quit: ")
 
         if action.lower() == 'exit':
             break
@@ -74,6 +93,8 @@ def main():
             parsed_data.append(new_entry)
             save_to_jsonl_file(file_path, [new_entry])
             print("Data added successfully!")
+        elif action.lower() == 'update':
+            add_synonym()
         else:
             print("Invalid action. Please enter 'search', 'add', or 'exit'.")
         print()

@@ -1,6 +1,6 @@
 import random
 n = 20
-guessed = int(n * random.random()) + 1
+guessed = int(n * random.randrange(0,20,)) + 1
 guess = 0
 while guess != guessed:
     guess = int(input("New number: "))

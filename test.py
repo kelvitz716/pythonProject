@@ -104,7 +104,27 @@ print(f'some day is {that_day}')
 
 day_difference = today - that_day
 print(f'difference in days: {day_difference}')
+print('\v')
 
+dict1 = {'Name':'Kelvin', 'Age':20, 'Class':'Last'}
+dict1['Age'] = 30
+print(dict1['Age'])
+s = str(dict1)
+print(s) 
+name = dict1.get('Name')
+print(f"The Name is {name}")
+
+import base64
+str = "This is the actual text to be encoded and decoded"
+str = base64.standard_b64encode(str.encode())
+print(str)
+str = base64.standard_b64decode(str.decode())
+print(str)
+print('\v')
+
+aTuple = (123,"java", 3.23)
+list1 = list(aTuple)
+list1.append()
 
 
 
