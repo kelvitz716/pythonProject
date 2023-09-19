@@ -7,85 +7,93 @@ class Calculator():
         # Window properties
         self.root = root
         self.root.title("Calculator")
-        #self.root.geometry('380x300+200+250')
-        Titlelabel = tk.Label(root, fg = 'green' , font = 'none 10 bold underline' ,text = 'Python Calculator', compound="center")
-        Titlelabel.place(relx=0.5, rely=0.1, anchor='center')
+        self.root.geometry('180x200+100+150')
+        self.root.resizable(True, True)
 
+        # Set the theme of the window
+        self.root.config(bg='black')
+        style= ttk.Style()
+        style.theme_use('clam')
+        style.configure("TEntry", fieldbackground="black")
+       
+        Titlelabel = tk.Label(root, fg = '#ff6700', bg='black' , font = 'none 10 bold underline' ,text = 'Python Calculator', compound="center")
+        Titlelabel.place(relx=0.5, rely=0.1, anchor='center',)
+        Titlelabel.grid(row=1, columnspan=5)
+        
         self.history = []
         self.calculator_entry_var = tk.StringVar()
     
         # calculator entry and results label
-        #tk.Label(self.root, text="Calculator").grid(row=0, column=0, sticky="w")
-        self.calculator_entry = ttk.Entry(root, textvariable=self.calculator_entry_var)
-        self.calculator_entry.grid(column=1, columnspan=4, row=0,sticky="e", padx=10, pady=5)
+        self.calculator_entry = ttk.Entry(root, textvariable=self.calculator_entry_var,foreground='yellow')
+        self.calculator_entry.place(relx=0.5, rely=0.2, anchor='center',)
+        self.calculator_entry.grid(row=2, columnspan=5)
 
         # Button 7
-        button_seven_button = tk.Button(self.root, text="7", command=self.button_seven)
-        button_seven_button.grid(row=2, column=1, padx=5, pady=5)
+        button_seven_button = tk.Button(self.root, text="7", bg='grey', fg='white', command=self.button_seven)
+        button_seven_button.grid(row=3, column=1, padx=5, pady=5)
 
         # Button 8
-        button_eight_button = tk.Button(self.root, text="8", command=self.button_eight)
-        button_eight_button.grid(row=2, column=2, padx=5, pady=5)
+        button_eight_button = tk.Button(self.root, text="8", bg='grey', fg='white', command=self.button_eight)
+        button_eight_button.grid(row=3, column=2, padx=5, pady=5)
 
         # Button 9
-        button_nine_button = tk.Button(self.root, text="9", command=self.button_nine)
-        button_nine_button.grid(row=2, column=3, padx=5, pady=5)
+        button_nine_button = tk.Button(self.root, text="9", bg='grey', fg='white', command=self.button_nine)
+        button_nine_button.grid(row=3, column=3, padx=5, pady=5)
 
         # Button /
-        button_divide_button = tk.Button(self.root, text="/", command=self.button_divide)
-        button_divide_button.grid(row=2, column=4, padx=10, pady=5)
+        button_divide_button = tk.Button(self.root, text="/", bg='green', fg='white', command=self.button_divide)
+        button_divide_button.grid(row=3, column=4, padx=10, pady=5)
 
         # Button 4
-        button_four_button = tk.Button(self.root, text="4", command=self.button_four)
-        button_four_button.grid(row=3, column=1, padx=10, pady=5)
+        button_four_button = tk.Button(self.root, text="4", bg='grey', fg='white', command=self.button_four)
+        button_four_button.grid(row=4, column=1, padx=10, pady=5)
 
         # Button 5
-        button_five_button = tk.Button(self.root, text="5", command=self.button_five)
-        button_five_button.grid(row=3, column=2, padx=10, pady=5)
+        button_five_button = tk.Button(self.root, text="5", bg='grey', fg='white', command=self.button_five)
+        button_five_button.grid(row=4, column=2, padx=10, pady=5)
 
         # Button 6
-        button_six_button = tk.Button(self.root, text="6", command=self.button_six)
-        button_six_button.grid(row=3, column=3, padx=10, pady=5)
+        button_six_button = tk.Button(self.root, text="6", bg='grey', fg='white', command=self.button_six)
+        button_six_button.grid(row=4, column=3, padx=10, pady=5)
 
         # Button *
-        button_multiply_button = tk.Button(self.root, text="*", command=self.button_multiply)
-        button_multiply_button.grid(row=3, column=4, padx=10, pady=5)
+        button_multiply_button = tk.Button(self.root, text="*", bg='green', fg='yellow', command=self.button_multiply)
+        button_multiply_button.grid(row=4, column=4, padx=10, pady=5)
 
         # Button 1
-        button_one_button = tk.Button(self.root, text="1", command=self.button_one)
-        button_one_button.grid(row=4, column=1, padx=10, pady=5)
+        button_one_button = tk.Button(self.root, text="1", bg='grey', fg='white', command=self.button_one)
+        button_one_button.grid(row=5, column=1, padx=10, pady=5)
 
         # Button 2
-        button_two_button = tk.Button(self.root, text="2", command=self.button_two)
-        button_two_button.grid(row=4, column=2, padx=10, pady=5)
+        button_two_button = tk.Button(self.root, text="2", bg='grey', fg='white', command=self.button_two)
+        button_two_button.grid(row=5, column=2, padx=10, pady=5)
 
         # Button 3
-        button_three_button = tk.Button(self.root, text="3", command=self.button_three)
-        button_three_button.grid(row=4, column=3, padx=10, pady=5)
+        button_three_button = tk.Button(self.root, text="3", bg='grey', fg='white', command=self.button_three)
+        button_three_button.grid(row=5, column=3, padx=10, pady=5)
 
         # Button -
-        button_minus_button = tk.Button(self.root, text="-", command=self.button_minus)
-        button_minus_button.grid(row=4, column=4, padx=10, pady=5)
+        button_minus_button = tk.Button(self.root, text="-", bg='green', fg='white', command=self.button_minus)
+        button_minus_button.grid(row=5, column=4, padx=10, pady=5)
 
         # Button clear
-        button_clear_button = tk.Button(self.root, text="C", command=self.button_clear)
-        button_clear_button.grid(row=5, column=1, padx=10, pady=5)
+        button_clear_button = tk.Button(self.root, text="C", bg='red', fg='white', command=self.button_clear)
+        button_clear_button.grid(row=6, column=1, padx=10, pady=5)
 
         # Button 0
-        button_zero_button = tk.Button(self.root, text="0", command=self.button_zero)
-        button_zero_button.grid(row=5, column=2, padx=10, pady=5)
+        button_zero_button = tk.Button(self.root, text="0", bg='grey', fg='white', command=self.button_zero)
+        button_zero_button.grid(row=6, column=2, padx=10, pady=5)
 
         # Button +
-        button_plus_button = tk.Button(self.root, text="+", command=self.button_plus)
-        button_plus_button.grid(row=5, column=3, padx=10, pady=5)
+        button_plus_button = tk.Button(self.root, text="+", bg='green', fg='white', command=self.button_plus)
+        button_plus_button.grid(row=6, column=3, padx=10, pady=5)
 
         # Button =
-        button_equal_button = tk.Button(self.root, text="=", command=self.button_equal)
-        button_equal_button.grid(row=5, column=4, padx=10, pady=5)
+        button_equal_button = tk.Button(self.root, text="=", bg='red', fg='white', command=self.button_equal)
+        button_equal_button.grid(row=6, column=4, padx=10, pady=5)
 
         # Button press 0
     def button_zero(self):
-        #self.calcultor_entry.set(self.calcultor_entry() + "0")
         self.calculator_entry.insert("", "0")
          
         # Button press 1
@@ -158,10 +166,18 @@ class Calculator():
         except Exception as e:
             print(f"there's an error: {e}")
             self.calculator_entry.delete(0, "end")
+            e = 'error: ' + str(e)
             self.calculator_entry.insert("end", e)
 
     
 if __name__ == "__main__":
     root = tk.Tk()
     app = Calculator(root)
+
+    # Configure row and column weights for dynamic sizing
+    for i in range(7):  # Assuming you have 6 rows
+        root.grid_rowconfigure(i, weight=1)
+    for i in range(5):  # Assuming you have 5 columns
+        root.grid_columnconfigure(i, weight=1)
+
     root.mainloop()
