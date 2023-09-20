@@ -12,9 +12,9 @@ def insertVariableIntoTable(id,name,email,joining_date,salary):
         VALUES
         (?, ?, ?, ?, ?);'''
         data_tuple = (id, name, email, joining_date, salary)
-        count = cursor.execute(SQLite_Insert_Query, data_tuple)
+        cursor.execute(SQLite_Insert_Query, data_tuple)
         SQLite_connect.commit()
-        print(f'Data successfully inserted in the table. {count} rows updated')
+        print(f'Data successfully inserted in the table. {cursor.rowcount} row updated')
         cursor.close
 
     except Exception as e:
