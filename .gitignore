@@ -13,3 +13,4 @@ bot.py
 clean_whatsapp_export.py
 test_2.py
 ./#main
+/SQLite3/sqlite3db.db
