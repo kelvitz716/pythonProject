@@ -10,6 +10,7 @@ def getDevInfo(id):
                         SELECT * FROM SqliteDB_Developers WHERE id = ?;'''
         cursor.execute(SQLite_Select_Query, (id,))
         records = cursor.fetchall()
+       #records = cursor.fetchone() -----> this will return only 1 row
         print(f'The Selected Id is {id}')
         for row in records:
             print(f'''
