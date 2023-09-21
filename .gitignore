@@ -14,7 +14,11 @@ clean_whatsapp_export.py
 test_2.py
 SQLite3/sqlite3db_BLOB.db
 /SQLite3/sqlite3db.db
-SQLite3/resume_1.txt
-SQLite3/resume_2.txt
-SQLite3/IMG_20230910_131236.jpg 
-SQLite3/PXL_20230505_103914098.jpg
+SQLite3/Data/IMG_20230910_131236.jpg
+.SQLite3/Data/PXL_20230505_103914098.jpg 
+SQLite3/Data/resume_1.txt 
+SQLite3/Data/resume_2.txt 
+SQLite3/David_resume.txt 
+SQLite3/David.jpg 
+SQLite3/Smith_resume.txt 
+SQLite3/Smith.jpg
