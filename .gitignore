@@ -12,5 +12,7 @@ Chat.txt
 bot.py
 clean_whatsapp_export.py
 test_2.py
-./#main
+SQLite3/sqlite3db_BLOB.db
 /SQLite3/sqlite3db.db
+SQLite3/resume_1.txt
+SQLite3/resume_2.txt
